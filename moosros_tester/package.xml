@@ -1,0 +1,25 @@
+<package>
+  <name>moosros_tester</name>
+  <version>1.0.0</version>
+  <description>moosros_tester</description>
+  <maintainer email="kevin.demarco@gmail.com">Kevin DeMarco</maintainer>
+
+  <license>MIT</license>
+
+  <url type="website">http://ros.org/wiki/moosros_tester</url>
+
+  <author>Kevin DeMarco</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>rostopic</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>rostopic</run_depend>
+
+</package>

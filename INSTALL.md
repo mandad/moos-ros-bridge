@@ -15,7 +15,7 @@ MOOS - http://oceanai.mit.edu/moos-ivp/pmwiki/pmwiki.php?n=Site.Download
 Compatability
 ================
 
-As of June 24th, 2014, I have tested moosros with ROS Hydro and moos-ivp 13.5.
+This fork has been updated to work with ROS indigo.
 
 Acquiring the Code
 ===================
@@ -33,21 +33,7 @@ $ git clone git://github.com/SyllogismRXS/moos-ros-bridge.git
 
 Building the Code
 ==================
-Add your new repo to your $ROS_PACKAGE_PATH environment variable.  
-$ echo 'export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:~/repos/moos-ros-bridge' >> ~/.bashrc  
-$ . ~/.bashrc
-
-Of course, if you didn't clone your repo into ~/repos/, then you will need
-to modify the previous command accordingly.
-
-Reindex your ROS packages  
-$ rospack profile
-
-Build moosros_tester  
-$ rosmake moosros_tester
-
-Build moosros  
-$ rosmake moosros
+Add this repo to your catkin workspace and run catkin_make.
 
 Launch Example
 ===============
@@ -70,8 +56,8 @@ Make sure HostName is LOCALHOST and Port is 9000. Click on "Connect"
 
 At this point, you should see the CounterFromROS variable incrementing.
 
-Using a ROS Launch file 
-========================= 
+Using a ROS Launch file
+=========================
 
 In order to use a ros launch file with MOOS, you have to wrap the roslaunch
 call and the pAntler call inside of a bash script. There is an example bash
@@ -90,7 +76,7 @@ To test the bash script, use rosrun:
 $ rosrun moosros_tester counter.sh
 
 A uMS window will open up, press "Connect" to start monitoring variables. You
-should see the CounterFromROS variable incrementing. 
+should see the CounterFromROS variable incrementing.
 
 At this point, the Bridge is also looking for changes in the "CounterFromMOOS"
 variable in the MOOS community. Let's monitor the variable in ROS as we change
