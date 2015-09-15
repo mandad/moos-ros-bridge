@@ -28,7 +28,7 @@ message("----------------------------------------------")
 
 
 catkin_package(
-  INCLUDE_DIRS include
+  INCLUDE_DIRS
   LIBRARIES
   CATKIN_DEPENDS roscpp std_msgs
   DEPENDS
